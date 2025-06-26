@@ -1,31 +1,84 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Download My Android App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body { font-family: sans-serif; text-align: center; padding: 50px; }
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: white;
+      padding: 40px 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 360px;
+      width: 90%;
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 24px;
+      color: #333;
+    }
+
     .download-btn {
+      display: inline-block;
       background-color: #4CAF50;
       color: white;
-      padding: 16px 30px;
-      text-decoration: none;
-      font-size: 20px;
+      padding: 14px 28px;
+      font-size: 18px;
+      border: none;
       border-radius: 10px;
+      text-decoration: none;
+      margin: 20px 0;
+      transition: background-color 0.3s ease;
+    }
+
+    .download-btn:hover {
+      background-color: #45a049;
+    }
+
+    .qr img {
+      width: 200px;
+      height: 200px;
+      margin-top: 10px;
+    }
+
+    .qr p {
+      margin: 10px 0 0;
+      color: #666;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
-  <h1>Download My Android App</h1>
-  <p>Click the button below to download the latest version.</p>
-  <a class="download-btn" href="https://github.com/cozrouki/androidapp/releases/download/v1.0.0/MobileController.apk">
-    📥 Download APK
-  </a>
+  <div class="card">
+    <h1>Download My Android App</h1>
+    <p>Click the button or scan the QR code below</p>
 
-  <div>
-    <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://github.com/cozrouki/androidapp/releases/download/v1.0.0/MobileController.apk" alt="QR Code to download APK">
-    <p>Scan to download</p>
+    <a class="download-btn" href="https://github.com/cozrouki/androidapp/releases/download/v1.0.0/MobileController.apk">
+      📥 Download APK
+    </a>
+
+    <div class="qr">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://github.com/cozrouki/androidapp/releases/download/v1.0.0/MobileController.apk" alt="QR Code">
+      <p>Scan to download</p>
+    </div>
   </div>
 </body>
 </html>
