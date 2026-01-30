@@ -1,2 +1,2 @@
-# androidapp
-android app download
+# 게임박물관 숏츠게임 안드로이드 컨트롤러
+museum 실행 시 안드로이드 컨트롤러
